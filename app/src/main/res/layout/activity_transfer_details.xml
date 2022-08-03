@@ -10,6 +10,6 @@
         android:id="@+id/btn_transfer_transfer"
         style="@style/Style_Button"
         android:layout_alignParentBottom="true"
-        android:text="Transfer" />
+        android:text="@string/transfer" />
 
 </RelativeLayout>

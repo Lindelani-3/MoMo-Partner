@@ -10,6 +10,6 @@
         android:id="@+id/btn_reqToPay_reqToPay"
         style="@style/Style_Button"
         android:layout_alignParentBottom="true"
-        android:text="Request To Pay" />
+        android:text="@string/request_to_pay" />
 
 </RelativeLayout>

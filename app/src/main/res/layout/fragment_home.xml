@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.home.fragments.HomeFragment">
+    tools:context=".presentation.home.fragments.HomeFragment"
+    android:id="@+id/home">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,13 +15,13 @@
             style="@style/Style_Button"
             android:layout_above="@+id/btn_transfer_home"
             android:layout_marginBottom="50dp"
-            android:text="Request To Pay" />
+            android:text="@string/request_to_pay" />
 
         <Button
             android:id="@+id/btn_transfer_home"
             style="@style/Style_Button"
             android:layout_alignParentBottom="true"
-            android:text="Transfer" />
+            android:text="@string/transfer" />
 
     </RelativeLayout>
 
