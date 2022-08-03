@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.home.fragments.RequestPayFragment"
-    android:id="@+id/requestToPay">
+    android:id="@+id/requestToPay_fragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
