@@ -5,10 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".presentation.home.fragments.TransferFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_transfer_fragment"
+            style="@style/Style_Button"
+            android:layout_centerInParent="true"
+            android:text="Transfer" />
+
+    </RelativeLayout>
 
 </FrameLayout>
