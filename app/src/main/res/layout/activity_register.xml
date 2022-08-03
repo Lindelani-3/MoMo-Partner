@@ -36,7 +36,18 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:text="" />
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login_reg"
+        style="@style/Style_Button"
+        android:layout_alignParentTop="true"
+        android:text="Back to Login" />
+
+    <Button
+        android:id="@+id/btn_reg"
+        style="@style/Style_Button"
+        android:layout_alignParentBottom="true"
+        android:text="@string/register" />
 
 </RelativeLayout>

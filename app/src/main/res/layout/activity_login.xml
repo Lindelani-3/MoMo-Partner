@@ -31,7 +31,17 @@
             android:text="" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btn_reg_login"
+        style="@style/Style_Button"
+        android:layout_alignParentTop="true"
+        android:text="@string/register" />
 
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/Style_Button"
+        android:layout_alignParentBottom="true"
+        android:text="@string/login" />
 
 
 </RelativeLayout>

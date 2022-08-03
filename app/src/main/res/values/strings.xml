@@ -5,4 +5,6 @@
     <string name="settings">Settings</string>
     <string name="request_to_pay">Request To Pay</string>
     <string name="transfer">Transfer</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
 </resources>
