@@ -42,7 +42,7 @@
         android:id="@+id/btn_login_reg"
         style="@style/Style_Button"
         android:layout_alignParentTop="true"
-        android:text="Back to Login" />
+        android:text="@string/back_to_login" />
 
     <Button
         android:id="@+id/btn_reg"

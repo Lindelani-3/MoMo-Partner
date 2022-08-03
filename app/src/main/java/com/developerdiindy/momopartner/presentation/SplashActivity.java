@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.developerdiindy.momopartner.R;
+import com.developerdiindy.momopartner.presentation.appuser.LoginActivity;
 import com.developerdiindy.momopartner.presentation.home.HomeActivity;
 
 @SuppressLint("CustomSplashScreen")
@@ -22,7 +23,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void doSplash() {
-        final Intent i = new Intent(SplashActivity.this, HomeActivity.class);
+        final Intent i = new Intent(SplashActivity.this, LoginActivity.class);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
