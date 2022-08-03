@@ -1,4 +1,4 @@
-package com.developerdiindy.momopartner.presentation;
+package com.developerdiindy.momopartner.presentation.appuser;
 
 import androidx.appcompat.app.AppCompatActivity;
 

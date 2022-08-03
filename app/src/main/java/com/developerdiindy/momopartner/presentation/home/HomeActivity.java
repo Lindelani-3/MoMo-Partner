@@ -6,11 +6,10 @@ import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.MenuItem;
 
 import com.developerdiindy.momopartner.R;
-import com.developerdiindy.momopartner.presentation.SettingsActivity;
+import com.developerdiindy.momopartner.presentation.appuser.SettingsActivity;
 import com.developerdiindy.momopartner.presentation.home.fragments.HomeFragment;
 import com.developerdiindy.momopartner.presentation.home.fragments.RequestPayFragment;
 import com.developerdiindy.momopartner.presentation.home.fragments.SettingsFragment;
