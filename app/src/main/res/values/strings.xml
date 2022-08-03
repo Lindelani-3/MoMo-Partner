@@ -12,4 +12,5 @@
     <string name="username_login">Username</string>
     <string name="username_register">Username</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="logout">Logout</string>
 </resources>

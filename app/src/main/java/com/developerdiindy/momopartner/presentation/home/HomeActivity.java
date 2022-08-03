@@ -53,7 +53,7 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case R.id.settings:
                         selectedFragment = new SettingsFragment();
-                        goToSettings();
+                        //goToSettings();
                         break;
                 }
 
