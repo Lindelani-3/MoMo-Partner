@@ -1,5 +1,6 @@
 package com.developerdiindy.momopartner.presentation.home.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.developerdiindy.momopartner.R;
+import com.developerdiindy.momopartner.presentation.appuser.SettingsActivity;
+import com.developerdiindy.momopartner.presentation.home.HomeActivity;
+import com.developerdiindy.momopartner.presentation.requesttopay.RequestDetailsActivity;
+import com.developerdiindy.momopartner.presentation.transfer.TransferDetailsActivity;
+
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -51,16 +59,45 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        setupButtons(view);
+
+        return view;
+    }
+
+    private void setupButtons(View view) {
+        Button btnTransfer = (Button) view.findViewById(R.id.btn_transfer_home);
+        Button btnRequest = (Button) view.findViewById(R.id.btn_reqToPay_home);
+
+        // transfer
+        btnTransfer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToTransfer();
+            }
+        });
+
+        // request
+        btnRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToRequestPay();
+            }
+        });
+    }
+
+    private void goToRequestPay() {
+        startActivity(new Intent(getActivity(), RequestDetailsActivity.class));
+    }
+
+    private void goToTransfer() {
+        startActivity(new Intent(getActivity(), TransferDetailsActivity.class));
     }
 }

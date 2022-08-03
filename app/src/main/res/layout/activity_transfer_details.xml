@@ -7,7 +7,7 @@
     tools:context=".presentation.transfer.TransferDetailsActivity">
 
     <Button
-        android:id="@+id/btn_transfer_fragment"
+        android:id="@+id/btn_transfer_transfer"
         style="@style/Style_Button"
         android:layout_alignParentBottom="true"
         android:text="Transfer" />
