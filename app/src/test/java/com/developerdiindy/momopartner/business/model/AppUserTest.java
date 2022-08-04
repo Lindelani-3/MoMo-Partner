@@ -3,7 +3,7 @@ package com.developerdiindy.momopartner.business.model;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 class AppUserTest {
 
