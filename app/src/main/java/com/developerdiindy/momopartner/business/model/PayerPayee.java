@@ -1,11 +1,11 @@
 package com.developerdiindy.momopartner.business.model;
 
-public class Payer {
+public class PayerPayee {
 
     private String partyIdType;
     private Long partyId;
 
-    public Payer(String partyIdType, Long partyId) {
+    public PayerPayee(String partyIdType, Long partyId) {
         this.partyIdType = partyIdType;
         this.partyId = partyId;
     }
