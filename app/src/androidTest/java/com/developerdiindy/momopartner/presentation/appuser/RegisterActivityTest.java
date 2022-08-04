@@ -35,7 +35,9 @@ public class RegisterActivityTest {
 
     @Test
     public void isActivityItemsShown() {
-        Espresso.onView(ViewMatchers.withId(R.id.et_username_register)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
+        Espresso.onView(ViewMatchers.withId(R.id.et_firstname_register)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
+        Espresso.onView(ViewMatchers.withId(R.id.et_lastname_register)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
+        Espresso.onView(ViewMatchers.withId(R.id.et_email_register)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
         Espresso.onView(ViewMatchers.withId(R.id.et_password_register)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
         Espresso.onView(ViewMatchers.withId(R.id.et_confirm_password_register)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
         Espresso.onView(ViewMatchers.withId(R.id.btn_login_reg)).check(matches(isDisplayed()));
@@ -44,7 +46,9 @@ public class RegisterActivityTest {
 
     @Test
     public void isItemsShowingCorrectText() {
-        Espresso.onView(ViewMatchers.withId(R.id.et_username_register)).check(matches(withHint(R.string.username_login)));
+        Espresso.onView(ViewMatchers.withId(R.id.et_firstname_register)).check(matches(withHint(R.string.first_name)));
+        Espresso.onView(ViewMatchers.withId(R.id.et_lastname_register)).check(matches(withHint(R.string.last_name)));
+        Espresso.onView(ViewMatchers.withId(R.id.et_email_register)).check(matches(withHint(R.string.email)));
         Espresso.onView(ViewMatchers.withId(R.id.et_password_register)).check(matches(withHint(R.string.password)));
         Espresso.onView(ViewMatchers.withId(R.id.et_confirm_password_register)).check(matches(withHint(R.string.confirm_password)));
         Espresso.onView(ViewMatchers.withId(R.id.btn_login_reg)).check(matches(withText(R.string.back_to_login)));
