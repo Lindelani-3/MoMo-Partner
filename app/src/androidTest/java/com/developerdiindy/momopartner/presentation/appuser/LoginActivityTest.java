@@ -42,7 +42,7 @@ public class LoginActivityTest {
 
     @Test
     public void isItemsShowingCorrectText() {
-        onView(withId(R.id.et_username_login)).check(matches(withHint(R.string.username_login)));
+        onView(withId(R.id.et_username_login)).check(matches(withHint(R.string.email)));
         onView(withId(R.id.et_password_login)).check(matches(withHint(R.string.password)));
         onView(withId(R.id.btn_reg_login)).check(matches(withText(R.string.register)));
         onView(withId(R.id.btn_login)).check(matches(withText(R.string.login)));
