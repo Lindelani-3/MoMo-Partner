@@ -59,12 +59,19 @@ public class LoginActivityTest {
     /**
      * Test both ways to navigate from SecondaryActivity to MainActivity
      */
+
     @Test
     public void isNavLoginToRegisterToLoginWorking() {
         onView(withId(R.id.btn_reg_login)).perform(click());
         onView(withId(R.id.activity_register)).check(matches(isDisplayed()));
         onView(withId(R.id.btn_login_reg)).perform(click()); // method 1
         onView(withId(R.id.activity_login)).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void isNavRegisterToHomeWorking() {
+        onView(withId(R.id.btn_login)).perform(click());
+        onView(withId(R.id.activity_home)).check(matches(isDisplayed()));
     }
 
 }
