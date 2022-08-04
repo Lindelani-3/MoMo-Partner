@@ -8,8 +8,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.developerdiindy.momopartner.R;
+import com.developerdiindy.momopartner.business.model.AppUser;
 import com.developerdiindy.momopartner.presentation.appuser.SettingsActivity;
 import com.developerdiindy.momopartner.presentation.home.fragments.HomeFragment;
 import com.developerdiindy.momopartner.presentation.home.fragments.RequestPayFragment;
@@ -20,10 +22,22 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class HomeActivity extends AppCompatActivity {
 
+    TextView tvHome;
+    private AppUser appUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        //Testing
+        Bundle bundle = getIntent().getExtras();
+        int id  = bundle.getInt("userId", 0);
+        appUser = new AppUser(id);
+        // ToDo getUser from DB -> use userName
+        String text = "User ID: " + appUser.getId();
+        tvHome = findViewById(R.id.tv_home);
+        tvHome.setText(text);
 
         setupNavigationMenu();
     }

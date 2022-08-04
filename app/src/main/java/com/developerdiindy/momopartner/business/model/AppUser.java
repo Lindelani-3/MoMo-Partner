@@ -2,13 +2,22 @@ package com.developerdiindy.momopartner.business.model;
 
 public class AppUser {
 
-    private Long id;
+    private int id;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
 
     public AppUser() {
+    }
+
+    public AppUser(int id) {
+        this.id = id;
+    }
+
+    public AppUser(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
     public AppUser(String firstName, String lastName, String email, String password) {
@@ -18,11 +27,11 @@ public class AppUser {
         this.password = password;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

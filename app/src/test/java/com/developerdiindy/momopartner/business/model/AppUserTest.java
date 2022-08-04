@@ -17,8 +17,8 @@ class AppUserTest {
     @Test
     public void testAppUserModel() {
         appUser = new AppUser("Steve", "Rogers", "cap@email.com", "password");
-        appUser.setId(101L);
-        assertEquals(101L, appUser.getId());
+        appUser.setId(101);
+        assertEquals(101, appUser.getId());
         appUser.setFirstName("Marc");
         assertEquals("Marc", appUser.getFirstName());
         appUser.setLastName("Spectre");
