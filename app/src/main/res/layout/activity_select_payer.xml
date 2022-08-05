@@ -6,11 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".presentation.requesttopay.SelectPayerActivity">
 
+    <LinearLayout
+        android:id="@+id/lyt_selectPayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/Style_Image" />
+
+    </LinearLayout>
+
     <ListView
         android:id="@+id/lv_selectPayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Style_ListView"
+        android:layout_below="@+id/lyt_selectPayer"
         android:layout_above="@+id/btn_selectPayer"/>
 
     <Button
