@@ -11,6 +11,6 @@
         style="@style/Style_Button"
         android:layout_centerInParent="true"
         android:layout_marginBottom="520dp"
-        android:text="Select Beneficiary" />
+        android:text="Select Payee" />
 
 </RelativeLayout>
