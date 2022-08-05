@@ -6,7 +6,7 @@ public class RequestToPay {
     private Long externalId;
     private Double amount;
     private String currency;
-    private PayerPayee payerPayee;
+    private PayerPayee payer;
     private String payerMessage;
     private String payeeNote;
     private String status;
@@ -19,17 +19,14 @@ public class RequestToPay {
         this.status = status;
     }
 
-    public RequestToPay(Long financialTransactionId, Long externalId,
-                        Double amount, String currency, PayerPayee payerPayee,
-                        String payerMessage, String payeeNote, String status) {
-        this.financialTransactionId = financialTransactionId;
+    public RequestToPay(Long externalId, Double amount, String currency, PayerPayee payer,
+                        String payerMessage, String payeeNote) {
         this.externalId = externalId;
         this.amount = amount;
         this.currency = currency;
-        this.payerPayee = payerPayee;
+        this.payer = payer;
         this.payerMessage = payerMessage;
         this.payeeNote = payeeNote;
-        this.status = status;
     }
 
     public Long getFinancialTransactionId() {
@@ -65,11 +62,11 @@ public class RequestToPay {
     }
 
     public PayerPayee getPayer() {
-        return payerPayee;
+        return payer;
     }
 
     public void setPayer(PayerPayee payerPayee) {
-        this.payerPayee = payerPayee;
+        this.payer = payerPayee;
     }
 
     public String getPayerMessage() {
