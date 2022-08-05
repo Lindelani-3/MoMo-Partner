@@ -10,7 +10,6 @@
         android:id="@+id/btn_selectBen"
         style="@style/Style_Button"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="520dp"
         android:text="Select Payer" />
 
 </RelativeLayout>
