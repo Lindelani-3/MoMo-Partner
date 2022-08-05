@@ -11,9 +11,10 @@ class PayerPayeeTest {
 
     @Test
     public void testPayerPayeeModel() {
-        payerPayee = new PayerPayee("", 202L);
-        payerPayee.setPartyId(303L);
-        assertEquals(303L, payerPayee.getPartyId());
+        payerPayee = new PayerPayee("12LMJ78");
+        payerPayee = new PayerPayee("", "202L");
+        payerPayee.setPartyId("303L");
+        assertEquals("303L", payerPayee.getPartyId());
         payerPayee.setPartyIdType("MSISDN");
         assertEquals("MSISDN", payerPayee.getPartyIdType());
     }

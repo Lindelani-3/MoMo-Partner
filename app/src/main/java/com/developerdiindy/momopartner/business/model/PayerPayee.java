@@ -3,9 +3,13 @@ package com.developerdiindy.momopartner.business.model;
 public class PayerPayee {
 
     private String partyIdType = "MSISDN";
-    private Long partyId;
+    private String partyId;
 
-    public PayerPayee(String partyIdType, Long partyId) {
+    public PayerPayee(String partyId) {
+        this.partyId = partyId;
+    }
+
+    public PayerPayee(String partyIdType, String partyId) {
         this.partyIdType = partyIdType;
         this.partyId = partyId;
     }
@@ -18,11 +22,11 @@ public class PayerPayee {
         this.partyIdType = partyIdType;
     }
 
-    public Long getPartyId() {
+    public String getPartyId() {
         return partyId;
     }
 
-    public void setPartyId(Long partyId) {
+    public void setPartyId(String partyId) {
         this.partyId = partyId;
     }
 }
