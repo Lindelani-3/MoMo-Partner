@@ -11,10 +11,23 @@
         android:id="@+id/lyt_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/Style_Image" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_loginInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lyt_login"
+        android:layout_above="@+id/btn_reg_login"
         android:layout_centerInParent="true"
         android:layout_marginHorizontal="80dp"
-        android:orientation="vertical"
-        >
+        android:layout_marginTop="44dp"
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/et_username_login"
@@ -35,7 +48,7 @@
     <Button
         android:id="@+id/btn_reg_login"
         style="@style/Style_Button"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/btn_login"
         android:text="@string/register" />
 
     <Button
