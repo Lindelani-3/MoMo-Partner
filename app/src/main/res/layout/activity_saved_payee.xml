@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.transfer.LoggedTransfersActivity">
+    tools:context=".presentation.transfer.SavedPayeeActivity">
 
     <Button
-        android:id="@+id/btn_selectTransfer"
+        android:id="@+id/btn_selectSavedPayee"
         style="@style/Style_Button"
         android:layout_alignParentBottom="true"
-        android:text="Select Logged Transfer" />
+        android:text="Select Saved payee" />
 
 </RelativeLayout>

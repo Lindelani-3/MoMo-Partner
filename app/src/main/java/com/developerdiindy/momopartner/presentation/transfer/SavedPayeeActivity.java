@@ -1,4 +1,3 @@
-
 package com.developerdiindy.momopartner.presentation.transfer;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,25 +8,27 @@ import android.view.View;
 import android.widget.Button;
 
 import com.developerdiindy.momopartner.R;
+import com.developerdiindy.momopartner.presentation.requesttopay.RequestDetailsActivity;
+import com.developerdiindy.momopartner.presentation.requesttopay.SavedPayerActivity;
 
-public class LoggedTransfersActivity extends AppCompatActivity {
+public class SavedPayeeActivity extends AppCompatActivity {
 
-    Button btnSelectTransfer;
+    Button btnSavedPayee;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_logged_transfers);
+        setContentView(R.layout.activity_saved_payee);
 
         setupTransferDetailsButton();
     }
 
     private void setupTransferDetailsButton() {
-        btnSelectTransfer = findViewById(R.id.btn_selectTransfer);
-        btnSelectTransfer.setOnClickListener(new View.OnClickListener() {
+        btnSavedPayee = findViewById(R.id.btn_selectSavedPayee);
+        btnSavedPayee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoggedTransfersActivity.this, TransferDetailsActivity.class));
+                startActivity(new Intent(SavedPayeeActivity.this, TransferDetailsActivity.class));
             }
         });
     }
