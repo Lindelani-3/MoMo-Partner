@@ -12,14 +12,14 @@
 
         <Button
             android:id="@+id/btn_reqToPay_home"
-            style="@style/Style_Button"
+            style="@style/Style_ButtonWithinApp"
             android:layout_above="@+id/btn_transfer_home"
             android:layout_marginBottom="50dp"
             android:text="@string/request_to_pay" />
 
         <Button
             android:id="@+id/btn_transfer_home"
-            style="@style/Style_Button"
+            style="@style/Style_ButtonWithinApp"
             android:layout_alignParentBottom="true"
             android:text="@string/transfer" />
 

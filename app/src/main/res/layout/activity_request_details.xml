@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/btn_reqToPay_reqToPay"
-        style="@style/Style_Button"
+        style="@style/Style_ButtonWithinApp"
         android:layout_alignParentBottom="true"
         android:text="@string/request_to_pay" />
 

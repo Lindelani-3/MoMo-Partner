@@ -8,17 +8,32 @@
     android:id="@+id/activity_register">
 
     <LinearLayout
+        android:id="@+id/lyt_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/Style_Image" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_registerInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginHorizontal="88dp"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/lyt_reg"
+        android:layout_above="@+id/lyt_regButtons"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/et_firstname_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="@string/first_name"
             android:text="" />
@@ -27,7 +42,7 @@
             android:id="@+id/et_lastname_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="@string/last_name"
             android:text="" />
@@ -36,7 +51,7 @@
             android:id="@+id/et_email_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="@string/email"
             android:text="" />
@@ -60,16 +75,29 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_login_reg"
-        style="@style/Style_Button"
-        android:layout_alignParentTop="true"
-        android:text="@string/back_to_login" />
-
-    <Button
-        android:id="@+id/btn_reg"
-        style="@style/Style_Button"
+    <LinearLayout
+        android:id="@+id/lyt_regButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        android:text="@string/register" />
+        android:layout_margin="60dp">
+
+        <Button
+            android:id="@+id/btn_login_reg"
+            style="@style/Style_Button"
+            android:layout_marginBottom="20dp"
+            android:text="@string/back_to_login" />
+
+        <Button
+            android:id="@+id/btn_reg"
+            style="@style/Style_Button"
+            android:layout_alignParentBottom="true"
+            android:text="@string/register" />
+
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>

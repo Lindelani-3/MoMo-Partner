@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/btn_selectRequest"
-        style="@style/Style_Button"
+        style="@style/Style_ButtonWithinApp"
         android:layout_alignParentBottom="true"
         android:text="Select Logged Request" />
 

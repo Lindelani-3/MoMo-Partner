@@ -6,7 +6,15 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingVertical">10dp</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:layout_margin">60dp</item>
+        <item name="android:background">@drawable/button_config</item>
+    </style>
+
+    <style name="Style_ButtonWithinApp" parent="TextAppearance.AppCompat.Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">10dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_margin">44dp</item>
         <item name="android:background">@drawable/button_config</item>
     </style>
 
