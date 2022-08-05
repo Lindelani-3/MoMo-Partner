@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginHorizontal="80dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="33dp"
         android:orientation="vertical">
 
         <EditText
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        android:layout_margin="60dp">
+        android:layout_margin="40dp">
 
         <Button
             android:id="@+id/btn_reg_login"

@@ -26,7 +26,6 @@
         android:layout_marginHorizontal="88dp"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/lyt_reg"
-        android:layout_above="@+id/lyt_regButtons"
         android:orientation="vertical">
 
         <EditText
@@ -60,7 +59,7 @@
             android:id="@+id/et_password_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="@string/password"
             android:text="" />
@@ -81,7 +80,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        android:layout_margin="60dp">
+        android:layout_margin="40dp">
 
         <Button
             android:id="@+id/btn_login_reg"

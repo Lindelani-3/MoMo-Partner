@@ -6,6 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".presentation.requesttopay.RequestDetailsActivity">
 
+    <LinearLayout
+        android:id="@+id/lyt_requestDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/Style_Image" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_requestDetailsInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="66dp"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/lyt_requestDetails"
+        android:layout_above="@+id/btn_reqToPay_reqToPay"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_request_externalId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="External ID"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/et_request_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Amount"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/et_payerPartyID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Payer PartyID"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/et_request_payeeNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Payee Note (Mine)"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/et_request_payerMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Payer message"
+            android:text="" />
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_reqToPay_reqToPay"
         style="@style/Style_ButtonWithinApp"
