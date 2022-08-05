@@ -2,7 +2,7 @@ package com.developerdiindy.momopartner.business.model;
 
 public class PayerPayee {
 
-    private String partyIdType;
+    private String partyIdType = "MSISDN";
     private Long partyId;
 
     public PayerPayee(String partyIdType, Long partyId) {

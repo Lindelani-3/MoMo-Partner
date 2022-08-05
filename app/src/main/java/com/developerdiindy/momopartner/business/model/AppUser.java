@@ -7,6 +7,7 @@ public class AppUser {
     private String lastName;
     private String email;
     private String password;
+    private Balance balance;
 
     public AppUser() {
     }
@@ -66,4 +67,14 @@ public class AppUser {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
+    public Balance getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Balance balance) {
+        this.balance = balance;
+    }
+
 }
