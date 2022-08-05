@@ -6,10 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".presentation.requesttopay.SelectPayerActivity">
 
+    <ListView
+        android:id="@+id/lv_selectPayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Style_ListView"
+        android:layout_above="@+id/btn_selectPayer"/>
+
     <Button
         android:id="@+id/btn_selectPayer"
         style="@style/Style_Button"
         android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
         android:text="Select Payer" />
 
 </RelativeLayout>

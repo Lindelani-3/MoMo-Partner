@@ -6,11 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".presentation.transfer.SelectPayeeActivity">
 
+    <ListView
+        android:id="@+id/lv_selectPayee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Style_ListView"
+        android:layout_above="@+id/btn_selectPayee"/>
+
     <Button
         android:id="@+id/btn_selectPayee"
         style="@style/Style_Button"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="520dp"
+        android:layout_alignParentBottom="true"
         android:text="Select Payee" />
 
 </RelativeLayout>

@@ -4,9 +4,15 @@
     <style name="Style_Button" parent="TextAppearance.AppCompat.Widget.Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingVertical">20dp</item>
+        <item name="android:paddingVertical">10dp</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:layout_margin">40dp</item>
+        <item name="android:layout_margin">60dp</item>
         <item name="android:background">@drawable/button_config</item>
     </style>
+
+    <style name="Style_ListView" parent="Widget.AppCompat.ListView">
+        <item name="android:layout_marginHorizontal">20dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+    </style>
+
 </resources>
