@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             Bundle bundle = new Bundle();
             appUser.setEmail(strEmail);
             appUser.setPassword(strPassword);
-            //ToDo check User in DB -> getUser (ID)
+            //ToDo return User in DB -> getUser (ID)
             // if noUser ->
             bundle.putInt("userId", appUser.getId());
             System.out.println(appUser.getId());
@@ -73,6 +73,4 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
-
-
 }
