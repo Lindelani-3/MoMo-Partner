@@ -11,7 +11,7 @@ class AccessTokenTest {
     AccessToken accessToken;
 
     @Test
-    void testAccessTokenModel() {
+    void testAccessTokenModelFunctionality() {
         accessToken = new AccessToken("DJFKSo0083kC");
         accessToken.setToken("NewToken");
         accessToken.setUserId(101);
