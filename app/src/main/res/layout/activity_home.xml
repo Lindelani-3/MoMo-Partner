@@ -8,6 +8,7 @@
     android:id="@+id/activity_home">
 
     <LinearLayout
+        android:id="@+id/lyt_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -15,15 +16,37 @@
         <ImageView
             style="@style/Style_Image" />
 
+        <LinearLayout
+            android:id="@+id/lyt_home_accBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="22dp"
+            android:layout_gravity="center"
+            android:background="@color/primary">
+
+            <TextView
+                android:id="@+id/tv_home_accountBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Balance: "
+                android:layout_gravity="end"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:textColor="@color/secondary_text"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/fragment_cont_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
         android:layout_above="@+id/bottom_nav_home"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
