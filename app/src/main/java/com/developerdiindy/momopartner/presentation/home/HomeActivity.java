@@ -77,9 +77,4 @@ public class HomeActivity extends AppCompatActivity {
         };
     }
 
-    private void goToSettings() {
-        Bundle bundle = new Bundle();
-        bundle.putString("key1", "Settings Activity");
-        startActivity(new Intent(HomeActivity.this, SettingsActivity.class).putExtras(bundle));
-    }
 }
