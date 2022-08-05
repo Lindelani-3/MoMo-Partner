@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MoMoPartner">
         <activity
+            android:name=".presentation.requesttopay.SelectPayerActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.requesttopay.RequestDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.transfer.SelectBeneficiaryActivity"
+            android:name=".presentation.transfer.SelectPayeeActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.transfer.TransferDetailsActivity"

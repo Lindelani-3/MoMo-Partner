@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.developerdiindy.momopartner.R;
 
-public class SelectBeneficiaryActivity extends AppCompatActivity {
+public class SelectPayeeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_beneficiary);
+        setContentView(R.layout.activity_select_payee);
     }
 }
