@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import com.developerdiindy.momopartner.R;
 import com.developerdiindy.momopartner.presentation.requesttopay.RequestDetailsActivity;
+import com.developerdiindy.momopartner.presentation.requesttopay.SelectPayerActivity;
 import com.developerdiindy.momopartner.presentation.transfer.TransferDetailsActivity;
 
 /**
@@ -75,7 +76,7 @@ public class RequestPayFragment extends Fragment {
         btnRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(view.getContext(), RequestDetailsActivity.class));
+                startActivity(new Intent(view.getContext(), SelectPayerActivity.class));
             }
         });
     }

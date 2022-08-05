@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import com.developerdiindy.momopartner.R;
 import com.developerdiindy.momopartner.presentation.home.HomeActivity;
+import com.developerdiindy.momopartner.presentation.transfer.SelectPayeeActivity;
 import com.developerdiindy.momopartner.presentation.transfer.TransferDetailsActivity;
 
 /**
@@ -75,7 +76,7 @@ public class TransferFragment extends Fragment {
         btnTransfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(view.getContext(), TransferDetailsActivity.class));
+                startActivity(new Intent(view.getContext(), SelectPayeeActivity.class));
             }
         });
     }

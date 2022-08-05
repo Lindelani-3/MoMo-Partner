@@ -26,6 +26,7 @@
         android:id="@+id/fragment_cont_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_centerInParent="true"
         android:layout_above="@+id/bottom_nav_home"
         android:layout_alignParentEnd="true" />
 

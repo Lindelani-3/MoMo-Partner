@@ -30,14 +30,14 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        //Testing
-        Bundle bundle = getIntent().getExtras();
-        int id  = bundle.getInt("userId", 0);
-        appUser = new AppUser(id);
-        // ToDo getUser from DB -> use userName
-        String text = "User ID: " + appUser.getId();
-        tvHome = findViewById(R.id.tv_home);
-        tvHome.setText(text);
+//        //Testing
+//        Bundle bundle = getIntent().getExtras();
+//        int id  = bundle.getInt("userId", 0);
+//        appUser = new AppUser(id);
+//        // ToDo getUser from DB -> use userName
+//        String text = "User ID: " + appUser.getId();
+//        tvHome = findViewById(R.id.tv_home);
+//        tvHome.setText(text);
 
         setupNavigationMenu();
     }

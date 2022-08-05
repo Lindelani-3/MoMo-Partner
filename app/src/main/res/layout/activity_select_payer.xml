@@ -7,7 +7,7 @@
     tools:context=".presentation.requesttopay.SelectPayerActivity">
 
     <Button
-        android:id="@+id/btn_selectBen"
+        android:id="@+id/btn_selectPayer"
         style="@style/Style_Button"
         android:layout_centerInParent="true"
         android:text="Select Payer" />

@@ -14,6 +14,8 @@ import com.developerdiindy.momopartner.R;
 import com.developerdiindy.momopartner.presentation.appuser.SettingsActivity;
 import com.developerdiindy.momopartner.presentation.home.HomeActivity;
 import com.developerdiindy.momopartner.presentation.requesttopay.RequestDetailsActivity;
+import com.developerdiindy.momopartner.presentation.requesttopay.SelectPayerActivity;
+import com.developerdiindy.momopartner.presentation.transfer.SelectPayeeActivity;
 import com.developerdiindy.momopartner.presentation.transfer.TransferDetailsActivity;
 
 import java.util.Objects;
@@ -94,10 +96,10 @@ public class HomeFragment extends Fragment {
     }
 
     private void goToRequestPay() {
-        startActivity(new Intent(getActivity(), RequestDetailsActivity.class));
+        startActivity(new Intent(getActivity(), SelectPayerActivity.class));
     }
 
     private void goToTransfer() {
-        startActivity(new Intent(getActivity(), TransferDetailsActivity.class));
+        startActivity(new Intent(getActivity(), SelectPayeeActivity.class));
     }
 }
