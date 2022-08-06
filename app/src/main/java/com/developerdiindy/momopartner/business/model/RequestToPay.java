@@ -2,8 +2,8 @@ package com.developerdiindy.momopartner.business.model;
 
 public class RequestToPay {
 
-    private Long financialTransactionId;
-    private Long externalId;
+    private String financialTransactionId;
+    private String externalId;
     private Double amount;
     private String currency;
     private PayerPayee payer;
@@ -11,7 +11,7 @@ public class RequestToPay {
     private String payeeNote;
     private String status;
 
-    public RequestToPay(Long financialTransactionId, Long externalId,
+    public RequestToPay(String financialTransactionId, String externalId,
                         Double amount, String status) {
         this.financialTransactionId = financialTransactionId;
         this.externalId = externalId;
@@ -19,7 +19,7 @@ public class RequestToPay {
         this.status = status;
     }
 
-    public RequestToPay(Long externalId, Double amount, String currency, PayerPayee payer,
+    public RequestToPay(String externalId, Double amount, String currency, PayerPayee payer,
                         String payerMessage, String payeeNote) {
         this.externalId = externalId;
         this.amount = amount;
@@ -29,19 +29,19 @@ public class RequestToPay {
         this.payeeNote = payeeNote;
     }
 
-    public Long getFinancialTransactionId() {
+    public String getFinancialTransactionId() {
         return financialTransactionId;
     }
 
-    public void setFinancialTransactionId(Long financialTransactionId) {
+    public void setFinancialTransactionId(String financialTransactionId) {
         this.financialTransactionId = financialTransactionId;
     }
 
-    public Long getExternalId() {
+    public String getExternalId() {
         return externalId;
     }
 
-    public void setExternalId(Long externalId) {
+    public void setExternalId(String externalId) {
         this.externalId = externalId;
     }
 
