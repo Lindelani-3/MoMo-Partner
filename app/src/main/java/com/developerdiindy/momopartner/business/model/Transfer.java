@@ -2,8 +2,8 @@ package com.developerdiindy.momopartner.business.model;
 
 public class Transfer {
 
-    private Long financialTransactionId;
-    private Long externalId;
+    private String financialTransactionId;
+    private String externalId;
     private Double amount;
     private String currency;
     private PayerPayee payee;
@@ -11,7 +11,20 @@ public class Transfer {
     private String payeeNote;
     private String status;
 
-    public Transfer(Long externalId, Double amount, String currency, PayerPayee payee, String payerMessage, String payeeNote) {
+    public Transfer(String financialTransactionId, String externalId, Double amount,
+                    String currency, PayerPayee payee, String payerMessage, String payeeNote, String status) {
+        this.financialTransactionId = financialTransactionId;
+        this.externalId = externalId;
+        this.amount = amount;
+        this.currency = currency;
+        this.payee = payee;
+        this.payerMessage = payerMessage;
+        this.payeeNote = payeeNote;
+        this.status = status;
+    }
+
+    public Transfer(String externalId, Double amount, String currency, PayerPayee payee,
+                    String payerMessage, String payeeNote) {
         this.externalId = externalId;
         this.amount = amount;
         this.currency = currency;
@@ -20,19 +33,19 @@ public class Transfer {
         this.payeeNote = payeeNote;
     }
 
-    public Long getFinancialTransactionId() {
+    public String getFinancialTransactionId() {
         return financialTransactionId;
     }
 
-    public void setFinancialTransactionId(Long financialTransactionId) {
+    public void setFinancialTransactionId(String financialTransactionId) {
         this.financialTransactionId = financialTransactionId;
     }
 
-    public Long getExternalId() {
+    public String getExternalId() {
         return externalId;
     }
 
-    public void setExternalId(Long externalId) {
+    public void setExternalId(String externalId) {
         this.externalId = externalId;
     }
 
