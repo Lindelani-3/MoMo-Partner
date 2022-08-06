@@ -1,6 +1,7 @@
 package com.developerdiindy.momopartner.presentation.transfer;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.test.core.app.ActivityScenario;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,3 +33,4 @@ public class TransferDetailsActivity extends AppCompatActivity {
         });
     }
 }
+

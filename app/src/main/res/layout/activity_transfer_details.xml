@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.transfer.TransferDetailsActivity">
+    tools:context=".presentation.transfer.TransferDetailsActivity"
+    android:id="@+id/activity_transfer_details">
 
     <LinearLayout
         android:id="@+id/lyt_transferDetails"
