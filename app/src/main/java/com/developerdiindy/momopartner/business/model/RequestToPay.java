@@ -4,7 +4,7 @@ public class RequestToPay {
 
     private String financialTransactionId;
     private String externalId;
-    private Double amount;
+    private double amount;
     private String currency;
     private PayerPayee payer;
     private String payerMessage;
@@ -12,14 +12,14 @@ public class RequestToPay {
     private String status;
 
     public RequestToPay(String financialTransactionId, String externalId,
-                        Double amount, String status) {
+                        double amount, String status) {
         this.financialTransactionId = financialTransactionId;
         this.externalId = externalId;
         this.amount = amount;
         this.status = status;
     }
 
-    public RequestToPay(String externalId, Double amount, String currency, PayerPayee payer,
+    public RequestToPay(String externalId, double amount, String currency, PayerPayee payer,
                         String payerMessage, String payeeNote) {
         this.externalId = externalId;
         this.amount = amount;
@@ -45,11 +45,11 @@ public class RequestToPay {
         this.externalId = externalId;
     }
 
-    public Double getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(Double amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 

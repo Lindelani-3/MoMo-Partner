@@ -2,23 +2,23 @@ package com.developerdiindy.momopartner.business.model;
 
 public class Balance {
 
-    private Double amount;
+    private double amount;
     private String currency = "SZL";
 
-    public Balance(Double amount) {
+    public Balance(double amount) {
         this.amount = amount;
     }
 
-    public Balance(Double amount, String currency) {
+    public Balance(double amount, String currency) {
         this.amount = amount;
         this.currency = currency;
     }
 
-    public Double getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(Double amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 

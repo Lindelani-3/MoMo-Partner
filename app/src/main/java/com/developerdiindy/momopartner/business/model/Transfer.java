@@ -4,14 +4,14 @@ public class Transfer {
 
     private String financialTransactionId;
     private String externalId;
-    private Double amount;
+    private double amount;
     private String currency;
     private PayerPayee payee;
     private String payerMessage;
     private String payeeNote;
     private String status;
 
-    public Transfer(String financialTransactionId, String externalId, Double amount,
+    public Transfer(String financialTransactionId, String externalId, double amount,
                     String currency, PayerPayee payee, String payerMessage, String payeeNote, String status) {
         this.financialTransactionId = financialTransactionId;
         this.externalId = externalId;
@@ -23,7 +23,7 @@ public class Transfer {
         this.status = status;
     }
 
-    public Transfer(String externalId, Double amount, String currency, PayerPayee payee,
+    public Transfer(String externalId, double amount, String currency, PayerPayee payee,
                     String payerMessage, String payeeNote) {
         this.externalId = externalId;
         this.amount = amount;
@@ -49,11 +49,11 @@ public class Transfer {
         this.externalId = externalId;
     }
 
-    public Double getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(Double amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
