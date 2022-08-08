@@ -68,10 +68,4 @@ public class LoginActivityTest {
         onView(withId(R.id.activity_login)).check(matches(isDisplayed()));
     }
 
-    @Test
-    public void isNavRegisterToHomeWorking() {
-        onView(withId(R.id.btn_login)).perform(click());
-        onView(withId(R.id.activity_home)).check(matches(isDisplayed()));
-    }
-
 }
