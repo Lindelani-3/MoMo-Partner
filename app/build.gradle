@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'jacoco'
 }
 
 android {
@@ -21,6 +22,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            testCoverageEnabled = true
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -31,6 +35,7 @@ android {
         unitTests.all {
             animationsDisabled = true
             useJUnitPlatform()
+            finalizedBy jacocoTestReport
         }
     }
 
@@ -83,4 +88,38 @@ dependencies {
         // hasn't moved to Marshmallow yet)
         exclude group: 'com.android.support', module: 'support-annotations'
     }
+}
+
+
+// Generate code coverage reports ... run with jacoco
+task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest', 'createDebugCoverageReport']) {
+
+    reports {
+        xml.required = true
+        csv.required = false
+        html.required = true
+    }
+
+    def fileFilter = ['androidx/**/*.*',
+                      '**/view/*.*',
+                      '**/data/*.*',
+                      '**/data/model/*.*',
+                      '**/generated/callback/*.*',
+                      '**/lambda$*.class',
+                      '**/lambda.class',
+                      '**/*lambda.class',
+                      '**/*lambda*.class']
+
+    def debugTree = fileTree(dir:
+            "${buildDir}/intermediates/javac/debug/classes",
+            excludes: fileFilter
+    )
+
+    def mainSrc = "/src/main/java"
+
+    sourceDirectories.setFrom(files([mainSrc]))
+
+    classDirectories.setFrom(files([debugTree]))
+    executionData.setFrom(fileTree(dir: "${buildDir}", includes:[
+            "/jacoco/testDebugUnitTest.exec","outputs/unit_test_code_coverage/debugUnitTest/testDebugUnitTest.exec"]))
 }
