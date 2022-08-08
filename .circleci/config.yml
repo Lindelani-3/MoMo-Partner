@@ -18,17 +18,15 @@ jobs:
           
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum "app/build.gradle" }}
+          
       - run:
           name: chmod permissions
           command: chmod +x ./gradlew
+          
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
        
-      - android/start-emulator:
-          avd-name: myavd
-          no-window: true
-          restore-gradle-cache-prefix: v1a
 
       - run:
           name: Run Tests
