@@ -9,26 +9,26 @@ import android.widget.Button;
 
 import com.developerdiindy.momopartner.R;
 import com.developerdiindy.momopartner.presentation.home.HomeActivity;
-import com.developerdiindy.momopartner.presentation.transfer.TransferDetailsActivity;
+import com.developerdiindy.momopartner.presentation.transfer.TransferStatusActivity;
 
-public class RequestDetailsActivity extends AppCompatActivity {
+public class PaymentStatusActivity extends AppCompatActivity {
 
-    Button btnRequest;
+    Button btnDone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_request_details);
+        setContentView(R.layout.activity_payment_status);
 
-        setupButtons();
+        setupDoneButton();
     }
 
-    private void setupButtons() {
-        btnRequest = findViewById(R.id.btn_reqToPay_reqToPay);
-        btnRequest.setOnClickListener(new View.OnClickListener() {
+    private void setupDoneButton() {
+        btnDone = findViewById(R.id.btn_paymentStatus_finish);
+        btnDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RequestDetailsActivity.this, PaymentStatusActivity.class));
+                startActivity(new Intent(PaymentStatusActivity.this, HomeActivity.class));
             }
         });
     }
