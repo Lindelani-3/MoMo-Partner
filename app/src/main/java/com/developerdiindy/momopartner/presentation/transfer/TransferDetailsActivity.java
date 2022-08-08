@@ -28,7 +28,7 @@ public class TransferDetailsActivity extends AppCompatActivity {
         btnTransfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(TransferDetailsActivity.this, HomeActivity.class));
+                startActivity(new Intent(TransferDetailsActivity.this, TransferStatusActivity.class));
             }
         });
     }
