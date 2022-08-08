@@ -2,6 +2,7 @@ package com.developerdiindy.momopartner.business.model;
 
 public class Transfer {
 
+    private int transferId;
     private String financialTransactionId;
     private String externalId;
     private double amount;
@@ -95,5 +96,13 @@ public class Transfer {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public int getTransferId() {
+        return transferId;
+    }
+
+    public void setTransferId(int transferId) {
+        this.transferId = transferId;
     }
 }

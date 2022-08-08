@@ -29,5 +29,7 @@ class TransferTest {
         assertEquals("Note", transfer.getPayeeNote());
         transfer.setStatus("STATUS");
         assertEquals("STATUS", transfer.getStatus());
+        transfer.setTransferId(111);
+        assertEquals(111, transfer.getTransferId());
     }
 }

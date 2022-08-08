@@ -29,5 +29,7 @@ class RequestToPayTest {
         assertEquals("Note", requestToPay.getPayeeNote());
         requestToPay.setStatus("STATUS");
         assertEquals("STATUS", requestToPay.getStatus());
+        requestToPay.setRequestToPayId(111);
+        assertEquals(111, requestToPay.getRequestToPayId());
     }
 }

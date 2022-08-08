@@ -2,6 +2,7 @@ package com.developerdiindy.momopartner.business.model;
 
 public class RequestToPay {
 
+    private int requestToPayId;
     private String financialTransactionId;
     private String externalId;
     private double amount;
@@ -91,5 +92,13 @@ public class RequestToPay {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public int getRequestToPayId() {
+        return requestToPayId;
+    }
+
+    public void setRequestToPayId(int requestToPayId) {
+        this.requestToPayId = requestToPayId;
     }
 }
