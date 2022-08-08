@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".presentation.requesttopay.QRStatusActivity"
     android:background="@color/primary"
-    android:theme="@style/Theme_StatusActivity.">
+    android:theme="@style/Theme_StatusActivity."
+    android:id="@+id/activity_qrStatus">
 
     <Button
         android:id="@+id/btn_shareQR_finish"

@@ -4,7 +4,6 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static androidx.test.espresso.matcher.ViewMatchers.withHint;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.junit.Assert.*;
@@ -22,31 +21,30 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
-public class TransferDetailsActivityTest {
+public class TransferStatusActivityTest {
 
     @Rule
-    public ActivityScenarioRule<TransferDetailsActivity> rule = new ActivityScenarioRule<>(TransferDetailsActivity.class);
+    public ActivityScenarioRule<TransferStatusActivity> rule = new ActivityScenarioRule<>(TransferStatusActivity.class);
 
     @Test
     public void isActivityLaunched() {
-        ActivityScenario<TransferDetailsActivity> scenario = rule.getScenario();
-        Espresso.onView(ViewMatchers.withId(R.id.activity_transfer_details)).check(matches(isDisplayed()));
+        ActivityScenario<TransferStatusActivity> scenario = rule.getScenario();
+        Espresso.onView(ViewMatchers.withId(R.id.activity_transfer_status)).check(matches(isDisplayed()));
     }
 
     @Test
     public void isActivityItemsShown() {
-        Espresso.onView(ViewMatchers.withId(R.id.btn_transfer_transfer)).check(matches(isDisplayed()));
+        Espresso.onView(ViewMatchers.withId(R.id.btn_transferStatus_finish)).check(matches(isDisplayed()));
     }
 
     @Test
     public void isItemsShowingCorrectText() {
-        Espresso.onView(ViewMatchers.withId(R.id.btn_transfer_transfer)).check(matches(withText(R.string.transfer)));
+        Espresso.onView(ViewMatchers.withId(R.id.btn_transferStatus_finish)).check(matches(withText(R.string.done)));
     }
 
     @Test
-    public void isNavTransferToStatusWorking() {
-        onView(withId(R.id.btn_transfer_transfer)).perform(click());
-        onView(withId(R.id.activity_transfer_status)).check(matches(isDisplayed()));
+    public void isNavTransferToHomeWorking() {
+        onView(withId(R.id.btn_transferStatus_finish)).perform(click());
+        onView(withId(R.id.activity_home)).check(matches(isDisplayed()));
     }
-
 }
