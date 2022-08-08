@@ -30,6 +30,7 @@ public class SelectPayerActivity extends AppCompatActivity {
 
     private void setupListView() {
         List<String> selectList = new ArrayList<>();
+        selectList.add("Share QR Code");
         selectList.add("Once Off Payer");
         selectList.add("Use Saved Payer");
         selectList.add("Previous RequestToPays");
@@ -44,12 +45,15 @@ public class SelectPayerActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        startActivity(new Intent(getApplicationContext(), RequestDetailsActivity.class));
+                        startActivity(new Intent(getApplicationContext(), ShareQRActivity.class));
                         break;
                     case 1:
-                        startActivity(new Intent(getApplicationContext(), SavedPayerActivity.class));
+                        startActivity(new Intent(getApplicationContext(), RequestDetailsActivity.class));
                         break;
                     case 2:
+                        startActivity(new Intent(getApplicationContext(), SavedPayerActivity.class));
+                        break;
+                    case 3:
                         startActivity(new Intent(getApplicationContext(), LoggedRequestsActivity.class));
                         break;
                 }

@@ -18,10 +18,10 @@ public class ScanQRActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_qractivity);
 
-        setupItemViews();
+        setupScanButton();
     }
 
-    private void setupItemViews() {
+    private void setupScanButton() {
         btnScanQR = findViewById(R.id.btn_scanQR);
         btnScanQR.setOnClickListener(new View.OnClickListener() {
             @Override

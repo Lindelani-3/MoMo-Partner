@@ -15,4 +15,5 @@
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="scan_qr_code">Scan QR Code</string>
+    <string name="done">Done</string>
 </resources>
