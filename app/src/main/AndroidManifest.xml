@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MoMoPartner">
         <activity
+            android:name=".presentation.transfer.ScanQRActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.transfer.SavedPayeeActivity"
             android:exported="false" />
         <activity

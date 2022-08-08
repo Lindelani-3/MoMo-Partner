@@ -33,6 +33,7 @@ public class SelectPayeeActivity extends AppCompatActivity {
 
     private void setupListView() {
         List<String> selectList = new ArrayList<>();
+        selectList.add("Scan QR Code");
         selectList.add("Once Off Payee");
         selectList.add("Use Saved Payee");
         selectList.add("Previous Transfers");
@@ -47,12 +48,15 @@ public class SelectPayeeActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        startActivity(new Intent(getApplicationContext(), TransferDetailsActivity.class));
+                        startActivity(new Intent(getApplicationContext(), ScanQRActivity.class));
                         break;
                     case 1:
-                        startActivity(new Intent(getApplicationContext(), SavedPayeeActivity.class));
+                        startActivity(new Intent(getApplicationContext(), TransferDetailsActivity.class));
                         break;
                     case 2:
+                        startActivity(new Intent(getApplicationContext(), SavedPayeeActivity.class));
+                        break;
+                    case 4:
                         startActivity(new Intent(getApplicationContext(), LoggedTransfersActivity.class));
                         break;
                 }
