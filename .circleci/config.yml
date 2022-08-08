@@ -1,71 +1,46 @@
+# CircleCI configuration file
 version: 2.1
 
 orbs: 
   android: circleci/android@2.1.2
   codecov: codecov/codecov@3.2.3
-  
+
 jobs:
-  build--test:
-    executor:
-      name: android/android-machine
-      tag: 2021.10.1
+  # Job one with a unique name
+  emulator setup:
+    docker:
+     - image: cimg/base:2022.05
+     
     steps:
+      - run: echo "Say hello to YAML!"
+
       - checkout
-      - android/create-avd:
-          avd-name: myavd
-          install: true
-          system-image: system-images;android-29;default;x86
-          
-      - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum "app/build.gradle" }}
-          
+
       - run:
           name: chmod permissions
           command: chmod +x ./gradlew
 
-      - android/start-emulator:
-          avd-name: myavd
-          no-window: true
-          restore-gradle-cache-prefix: v1a
-          
       - run:
-          name: Download Dependencies
-          command: ./gradlew androidDependencies
-       
+          name: chmod permissions
+          command: ./gradlew clean build
 
-      - run:
-          name: Run Tests
-          command: ./gradlew lint test
-      
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum "app/build.gradle" }} 
-          
-      - android/save-gradle-cache:
-          cache-prefix: v1a
-          
-      # And finally run the release build
-
-      - run:
-          name: Jacoco
-          command: ./gradlew jacocoTestReport
-          
-          
       - run:
           name: Assemble release build
           command: |
             ./gradlew assembleRelease
+
       - store_artifacts:
           path: app/build/reports
           destination: reports
+
       - store_test_results:
           path: app/build/test-results
             
       - codecov/upload
-      
+
 workflows:
-  TestTest: # This is the name of the workflow, feel free to change it to better match your workflow.
-    # Inside the workflow, you define the jobs you want to run.
+  # Name of workflow
+  TestsTest:
+    # List of jobs that will run
     jobs:
-      - build--test
+      - emulator setup
