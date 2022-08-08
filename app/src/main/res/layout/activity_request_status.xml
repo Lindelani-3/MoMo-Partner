@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.requesttopay.PaymentStatusActivity"
+    tools:context=".presentation.requesttopay.RequestStatusActivity"
     android:background="@color/primary"
-    android:theme="@style/Theme_StatusActivity.">
+    android:theme="@style/Theme_StatusActivity."
+    android:id="@+id/activity_request_status">
 
     <Button
         android:id="@+id/btn_paymentStatus_finish"

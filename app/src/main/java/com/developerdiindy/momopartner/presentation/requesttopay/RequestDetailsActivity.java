@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.developerdiindy.momopartner.R;
-import com.developerdiindy.momopartner.presentation.home.HomeActivity;
-import com.developerdiindy.momopartner.presentation.transfer.TransferDetailsActivity;
 
 public class RequestDetailsActivity extends AppCompatActivity {
 
@@ -28,7 +26,7 @@ public class RequestDetailsActivity extends AppCompatActivity {
         btnRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RequestDetailsActivity.this, PaymentStatusActivity.class));
+                startActivity(new Intent(RequestDetailsActivity.this, RequestStatusActivity.class));
             }
         });
     }

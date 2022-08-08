@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.requesttopay.RequestDetailsActivity">
+    tools:context=".presentation.requesttopay.RequestDetailsActivity"
+    android:id="@+id/activity_request_details">
 
     <LinearLayout
         android:id="@+id/lyt_requestDetails"

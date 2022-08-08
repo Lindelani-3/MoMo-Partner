@@ -15,37 +15,37 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.developerdiindy.momopartner.R;
-import com.developerdiindy.momopartner.presentation.transfer.TransferDetailsActivity;
+import com.developerdiindy.momopartner.presentation.transfer.TransferStatusActivity;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
-public class RequestDetailsActivityTest {
+public class RequestStatusActivityTest {
 
     @Rule
-    public ActivityScenarioRule<RequestDetailsActivity> rule = new ActivityScenarioRule<>(RequestDetailsActivity.class);
+    public ActivityScenarioRule<RequestStatusActivity> rule = new ActivityScenarioRule<>(RequestStatusActivity.class);
 
     @Test
     public void isActivityLaunched() {
-        ActivityScenario<RequestDetailsActivity> scenario = rule.getScenario();
-        Espresso.onView(ViewMatchers.withId(R.id.activity_request_details)).check(matches(isDisplayed()));
+        ActivityScenario<RequestStatusActivity> scenario = rule.getScenario();
+        Espresso.onView(ViewMatchers.withId(R.id.activity_request_status)).check(matches(isDisplayed()));
     }
 
     @Test
     public void isActivityItemsShown() {
-        Espresso.onView(ViewMatchers.withId(R.id.btn_reqToPay_reqToPay)).check(matches(isDisplayed()));
+        Espresso.onView(ViewMatchers.withId(R.id.btn_paymentStatus_finish)).check(matches(isDisplayed()));
     }
 
     @Test
     public void isItemsShowingCorrectText() {
-        Espresso.onView(ViewMatchers.withId(R.id.btn_reqToPay_reqToPay)).check(matches(withText(R.string.request_to_pay)));
+        Espresso.onView(ViewMatchers.withId(R.id.btn_paymentStatus_finish)).check(matches(withText(R.string.done)));
     }
 
     @Test
     public void isNavRequestToHomeWorking() {
-        onView(withId(R.id.btn_reqToPay_reqToPay)).perform(click());
-        onView(withId(R.id.activity_request_status)).check(matches(isDisplayed()));
+        onView(withId(R.id.btn_paymentStatus_finish)).perform(click());
+        onView(withId(R.id.activity_home)).check(matches(isDisplayed()));
     }
 }
