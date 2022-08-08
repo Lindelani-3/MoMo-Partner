@@ -14,6 +14,7 @@
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/imageView_home"
             style="@style/Style_Image" />
 
         <LinearLayout
