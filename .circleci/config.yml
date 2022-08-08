@@ -46,7 +46,7 @@ jobs:
 
       - run:
           name: Jacoco
-          command: chmod +x ./gradlew jacocoTestReport
+          command: ./gradlew jacocoTestReport
           
           
       - run:
