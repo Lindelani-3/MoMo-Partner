@@ -26,6 +26,7 @@ public class TransferDetailsActivity extends AppCompatActivity {
 
     private void getUserInput() {
         setupInputViews();
+        // ToDo
     }
 
     private void setupInputViews() {
@@ -42,7 +43,6 @@ public class TransferDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 doTransfer();
-                startActivity(new Intent(TransferDetailsActivity.this, TransferStatusActivity.class));
             }
         });
     }
@@ -51,18 +51,21 @@ public class TransferDetailsActivity extends AppCompatActivity {
         doCreateAccessToken_POST();
         doTransfer_POST();
         doGetTransferStatus_GET();
+
+        // ToDo goToStatus page with Status from GET
+        startActivity(new Intent(TransferDetailsActivity.this, TransferStatusActivity.class));
     }
 
     private void doGetTransferStatus_GET() {
-
+        // ToDo
     }
 
     private void doTransfer_POST() {
-
+        // ToDo
     }
 
     private void doCreateAccessToken_POST() {
-
+        // ToDo
     }
 }
 
