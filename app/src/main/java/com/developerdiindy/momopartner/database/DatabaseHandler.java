@@ -25,9 +25,10 @@ public class DatabaseHandler {
                 field[2] = "password";
                 //Creating array for data
                 String[] data = new String[3];
-                data[0] = "data-1";
-                data[1] = "data-2";
-                data[2] = "data-2";
+                data[0] = appUser.getFullName();
+                data[1] = appUser.getEmail();
+                data[2] = appUser.getPassword();
+
                 PutData putData = new PutData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php", "POST", field, data);
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
