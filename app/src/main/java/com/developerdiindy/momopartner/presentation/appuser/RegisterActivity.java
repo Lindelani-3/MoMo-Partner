@@ -68,8 +68,8 @@ public class RegisterActivity extends AppCompatActivity {
         if (isInputValid == 0) {
             Bundle bundle = new Bundle();
             appUser = new AppUser(strFullName, strEmail, strPassword);
-            //ToDo add User to DB -> getUser (ID)
-            // if existsUser ->
+            //ToDo if existsUser ->
+            // else -> add User to DB -> getUser (ID)
             bundle.putInt("userId", appUser.getId());
             System.out.println(appUser.getId());
             startActivity(new Intent(RegisterActivity.this, HomeActivity.class).putExtras(bundle));
