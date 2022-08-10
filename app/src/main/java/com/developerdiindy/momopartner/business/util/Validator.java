@@ -18,13 +18,9 @@ public class Validator {
         return 0;
     }
 
-    public static int checkUserInput_Register(Context RegisterActivity, String firstName, String lastName, String email, String password, String confirmPassword) {
-        if (firstName.equals("")) {
+    public static int checkUserInput_Register(Context RegisterActivity, String fullName, String email, String password, String confirmPassword) {
+        if (fullName.equals("")) {
             Toast.makeText(RegisterActivity, "Enter First Name", Toast.LENGTH_LONG).show();
-            return 1;
-        }
-        if (lastName.equals("")) {
-            Toast.makeText(RegisterActivity, "Enter Last Name", Toast.LENGTH_LONG).show();
             return 1;
         }
         if (email.equals("")) {

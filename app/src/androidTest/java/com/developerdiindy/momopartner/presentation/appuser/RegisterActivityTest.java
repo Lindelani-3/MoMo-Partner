@@ -35,8 +35,7 @@ public class RegisterActivityTest {
 
     @Test
     public void isActivityItemsShown() {
-        Espresso.onView(ViewMatchers.withId(R.id.et_firstname_register)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
-        Espresso.onView(ViewMatchers.withId(R.id.et_lastname_register)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
+        Espresso.onView(ViewMatchers.withId(R.id.et_fullname_register)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
         Espresso.onView(ViewMatchers.withId(R.id.et_email_register)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
         Espresso.onView(ViewMatchers.withId(R.id.et_password_register)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
         Espresso.onView(ViewMatchers.withId(R.id.et_confirm_password_register)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
@@ -46,8 +45,7 @@ public class RegisterActivityTest {
 
     @Test
     public void isItemsShowingCorrectText() {
-        Espresso.onView(ViewMatchers.withId(R.id.et_firstname_register)).check(matches(withHint(R.string.first_name)));
-        Espresso.onView(ViewMatchers.withId(R.id.et_lastname_register)).check(matches(withHint(R.string.last_name)));
+        Espresso.onView(ViewMatchers.withId(R.id.et_fullname_register)).check(matches(withHint(R.string.full_name)));
         Espresso.onView(ViewMatchers.withId(R.id.et_email_register)).check(matches(withHint(R.string.email)));
         Espresso.onView(ViewMatchers.withId(R.id.et_password_register)).check(matches(withHint(R.string.password)));
         Espresso.onView(ViewMatchers.withId(R.id.et_confirm_password_register)).check(matches(withHint(R.string.confirm_password)));

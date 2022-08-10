@@ -13,11 +13,13 @@ import com.developerdiindy.momopartner.R;
 import com.developerdiindy.momopartner.business.model.AppUser;
 import com.developerdiindy.momopartner.business.util.Validator;
 import com.developerdiindy.momopartner.presentation.home.HomeActivity;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class LoginActivity extends AppCompatActivity {
 
     Button btnRegister, btnLogin;
-    EditText etEmail, etPassword;
+    TextInputEditText etEmail, etPassword;
+
 
     AppUser appUser;
 

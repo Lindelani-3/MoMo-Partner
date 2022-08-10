@@ -6,18 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.developerdiindy.momopartner.R;
 import com.developerdiindy.momopartner.business.model.AppUser;
 import com.developerdiindy.momopartner.business.util.Validator;
 import com.developerdiindy.momopartner.presentation.home.HomeActivity;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class RegisterActivity extends AppCompatActivity {
 
     Button btnRegister, btnLogin;
-    EditText etFirstName, etLastName, etEmail, etPassword, etConfirmPassword;
+    TextInputEditText etFullName, etEmail, etPassword, etConfirmPassword;
 
     AppUser appUser;
 
@@ -30,8 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void setupViewItems() {
-        etFirstName = findViewById(R.id.et_firstname_register);
-        etLastName = findViewById(R.id.et_lastname_register);
+        etFullName = findViewById(R.id.et_fullname_register);
         etEmail = findViewById(R.id.et_email_register);
         etPassword = findViewById(R.id.et_password_register);
         etConfirmPassword = findViewById(R.id.et_confirm_password_register);
@@ -43,6 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // ToDo register()
                 startActivity(new Intent(RegisterActivity.this, HomeActivity.class));
                 Toast.makeText(RegisterActivity.this, "User Registered", Toast.LENGTH_SHORT).show();
             }
@@ -58,18 +58,16 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void doRegister() {
-        String strFirst = etFirstName.getText().toString();
-        String strLast = etLastName.getText().toString();
+        String strFullName = etFullName.getText().toString();
         String strEmail = etEmail.getText().toString();
         String strPassword = etPassword.getText().toString();
         String strConfirmPass = etConfirmPassword.getText().toString();
 
-        int isInputValid = Validator.checkUserInput_Register(RegisterActivity.this, strFirst,
-                strLast, strEmail, strPassword, strConfirmPass);
+        int isInputValid = Validator.checkUserInput_Register(RegisterActivity.this, strFullName, strEmail, strPassword, strConfirmPass);
 
         if (isInputValid == 0) {
             Bundle bundle = new Bundle();
-            appUser = new AppUser(strFirst, strLast, strEmail, strPassword);
+            appUser = new AppUser(strFullName, strEmail, strPassword);
             //ToDo add User to DB -> getUser (ID)
             // if existsUser ->
             bundle.putInt("userId", appUser.getId());
