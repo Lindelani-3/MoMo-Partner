@@ -3,6 +3,7 @@ package com.developerdiindy.momopartner.business.model;
 public class AppUser {
 
     private int id;
+    private String fullName;
     private String firstName;
     private String lastName;
     private String email;
@@ -17,6 +18,12 @@ public class AppUser {
     }
 
     public AppUser(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
+    public AppUser(String fullName, String email, String password) {
+        this.fullName = fullName;
         this.email = email;
         this.password = password;
     }
@@ -77,4 +84,11 @@ public class AppUser {
         this.balance = balance;
     }
 
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 }
