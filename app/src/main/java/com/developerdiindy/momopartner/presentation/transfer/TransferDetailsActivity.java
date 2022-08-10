@@ -9,11 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.developerdiindy.momopartner.R;
+import com.developerdiindy.momopartner.business.model.Transfer;
 
 public class TransferDetailsActivity extends AppCompatActivity {
 
     Button btnTransfer;
     EditText etExternalId, etAmount, etPartyId, etMyMessage, etPayeeNote;
+
+    Transfer transfer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
