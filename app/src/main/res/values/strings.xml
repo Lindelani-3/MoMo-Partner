@@ -18,4 +18,5 @@
     <string name="done">Done</string>
     <string name="full_name">Full Name</string>
     <string name="select_payee">Select Payee</string>
+    <string name="select_payer">Select Payer</string>
 </resources>
