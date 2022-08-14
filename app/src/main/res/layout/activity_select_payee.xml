@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.transfer.SelectPayeeActivity">
+    tools:context=".presentation.transfer.SelectPayeeActivity"
+    android:id="@+id/activity_selectPayee">
 
     <LinearLayout
         android:id="@+id/lyt_selectPayee"
@@ -29,6 +30,6 @@
         android:id="@+id/btn_selectPayee"
         style="@style/Style_ButtonWithinApp"
         android:layout_alignParentBottom="true"
-        android:text="Select Payee" />
+        android:text="@string/select_payee" />
 
 </RelativeLayout>
