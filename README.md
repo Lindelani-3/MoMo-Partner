@@ -3,8 +3,6 @@
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/Lindelani-3/MoMo-Partner/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Lindelani-3/MoMo-Partner/tree/master)
 
-//&circle-token=bf3a6d735198a126ac728e791055308db38a24a2
-
 [![codecov](https://codecov.io/gh/Lindelani-3/MoMo-Partner/branch/master/graph/badge.svg?token=PVBBGP59XN)](https://codecov.io/gh/Lindelani-3/MoMo-Partner)
 
 
