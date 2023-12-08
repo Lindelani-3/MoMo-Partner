@@ -1,7 +1,6 @@
 # MoMo Partner CashApp
 
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Lindelani-3/MoMo-Partner/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Lindelani-3/MoMo-Partner/tree/master)
 
 [![codecov](https://codecov.io/gh/Lindelani-3/MoMo-Partner/branch/master/graph/badge.svg?token=PVBBGP59XN)](https://codecov.io/gh/Lindelani-3/MoMo-Partner)
 
@@ -37,3 +36,6 @@ https://github.com/Lindelani-3/MoMo-Partner/assets/99859713/716cb388-0cd7-463a-8
 
 
 Files: https://drive.google.com/file/d/182Qld7ix8joodH2p2GQCbuvS2upoS_49/view?usp=sharing
+
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Lindelani-3/MoMo-Partner/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Lindelani-3/MoMo-Partner/tree/master)
